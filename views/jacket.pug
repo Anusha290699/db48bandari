@@ -6,27 +6,8 @@ block content
   div(class="container-fluid")
         div(class="row")
             -
-                let jacket = [
-                    {
-                        "name": "Puffed jacket",
-                        "brand": "Chapter Club",
-                        "price": "Thirty-four USD"
-                    },
-                    {
-                        "name": "Sherpa",
-                        "brand": "CK",
-                        "price": "Twenty-nine USD"
-                    
-                    },
-                    {
-                        "name": "Tan jacket",
-                        "brand": "Tommy",
-                        "price": "Twenty-five USD"
-                    
-                    },
-
-                   
-                ]
+                let matters = results
+                
             each v,index in jacket
                 div(class="col-sm-2" onclick=`buy(${index})`) #{v.name}
                 div(class="col-sm-2" onclick=`buy(${index})`) #{v.brand}
