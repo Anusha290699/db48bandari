@@ -1,0 +1,34 @@
+extends layout 
+ 
+block content 
+  h1= title 
+ 
+  form(id='jacketForm', action="/resource/jacket", method="POST") 
+    div.form-group 
+        label.jacketAttr(for='name') jacket name
+        input#name(type='text', name='name')
+    div.form-group 
+        label.jacketAttr(for='brand') jacket brand 
+        input#brand(type='text', name='brand')
+    div.form-group
+        label.jacketAttr(for='price') jacket price 
+        input#price(type='number', name='price')
+    input(type="submit")
+ 
+  script.
+    document.forms['jacketForm'].addEventListener('submit', (event) => { 
+      event.preventDefault(); 
+      // TODO do something here to show user jacket form is being submitted 
+      fetch(event.target.action, { 
+        method: 'POST', 
+        body: new URLSearchParams(new FormData(event.target)) // event.target is the form 
+      }).then((resp) => { 
+        return resp.text(); // or resp.text() or jacketever the server sends 
+      }).then((body) => { 
+        alert("Save succeded") 
+        // TODO handle body 
+      }).catch((error) => { 
+        // TODO handle error 
+        alert("Save failed " + error ) 
+      }); 
+    });

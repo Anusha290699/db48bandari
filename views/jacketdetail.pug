@@ -1,0 +1,22 @@
+extends layout 
+ 
+block content 
+  h1= title 
+ 
+  - let jacketid = toShow._id 
+  - let name = toShow.name 
+  - let brand= toShow.brand 
+  - let price = toShow.price 
+  div 
+    div.row 
+      div(class='jacketAttr mr-3') jacket ID is: 
+      div #{jacketid} 
+    div.row 
+      div(class='jacketAttr mr-3') name is: 
+      div #{name} 
+    div.row 
+      div(class='jacketAttr mr-3') brand is: 
+      div #{brand} 
+    div.row 
+      div(class='jacketAttr mr-3') price is: 
+      div #{price}

@@ -6,8 +6,8 @@ block content
   div(class="container-fluid")
         div(class="row")
             -
-                let matters = results
-                
+                let jacket = results
+
             each v,index in jacket
                 div(class="col-sm-2" onclick=`buy(${index})`) #{v.name}
                 div(class="col-sm-2" onclick=`buy(${index})`) #{v.brand}
