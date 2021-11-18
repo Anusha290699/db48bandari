@@ -12,3 +12,17 @@ a {
   width: 120px; 
 }
 
+.jacketAttr{
+  background-color: red;
+  width: 200px;
+  margin: 5px;
+  text-align: center;
+  color: green;
+  padding: 10px;
+  border-radius: 5px;
+  }
+  .Title{
+  color: navajowhite;
+  font-weight: 500;
+  font-family: sans-serif;
+  }
