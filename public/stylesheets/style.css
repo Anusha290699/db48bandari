@@ -13,16 +13,16 @@ a {
 }
 
 .jacketAttr{
-  background-color: red;
+  background-color: yellow;
   width: 200px;
   margin: 5px;
   text-align: center;
-  color: green;
+  color: blue;
   padding: 10px;
   border-radius: 5px;
   }
   .Title{
-  color: navajowhite;
+  color: goldenrod;
   font-weight: 500;
   font-family: sans-serif;
   }
