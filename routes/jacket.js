@@ -20,12 +20,12 @@ router.get('/', jacket_controlers.jacket_view_all_Page);
 router.get('/detail', jacket_controlers.jacket_view_one_Page);
 
 /* GET create jacket page */ 
-router.get('/create', jacket_controlers.jacket_create_Page); 
+router.get('/create',secured, jacket_controlers.jacket_create_Page); 
 
 /* GET create jacket page */ 
 router.get('/update',secured, jacket_controlers.jacket_update_Page);
 
 /* GET create jacket page */ 
-router.get('/delete', jacket_controlers.jacket_delete_Page);
+router.get('/delete', secured,jacket_controlers.jacket_delete_Page);
 
 module.exports = router;

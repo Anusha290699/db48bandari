@@ -1,6 +1,8 @@
 extends layout
 
 block content
+ -let destinations1 = `dispatch(\"/jacket/create\")`
+  button.btn( class="btn-primary m-1", onclick= destinations1) Create
   h1= title
   - let jacket = results;
   script.
@@ -11,9 +13,13 @@ block content
   div(class='container-fluid')
     div(class='row m-1')
       each v, index in jacket 
-       - let destination = `dispatch(\"/jacket/update?id=${v._id}\")`
+       -let destination = `dispatch(\"/jacket/update?id=${v._id}\")`
+       -let destinations2 = `dispatch(\"/jacket/detail?id=${v._id}\")`
+       -let destinations3 = `dispatch(\"/jacket/delete?id=${v._id}\")`
        div(class="row-sm-2", class="m-1") Item #{v.name}(#{v.brand}) is #{v.price}
         button.btn( class="btn-primary ml-1", onclick= destination) Update
+        button.btn( class="btn-success m-1", onclick= destinations2) Detail
+        button.btn( class="btn-danger m-1", onclick= destinations3) Delete
 
   script. 
     function dispatch(path){ 
